@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup ({
   -- nice to have
   { "numToStr/comment.nvim" },
-  { "windwp/nvim-autopairs" },
+  { "windwp/nvim-autopairs", event = "InsertEnter" },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   { "nvim-treesitter/nvim-treesitter-context" },
   { "hrsh7th/nvim-cmp" },
@@ -85,3 +85,5 @@ require('mason-lspconfig').setup({
     lsp_zero.default_setup,
   },
 })
+
+require('nvim-autopairs').setup()
